@@ -18,19 +18,19 @@ Steps
 None
 Problem Statement 2 - Functions problem statement
 # Description
-<Write some description for your solution>
+We need to convert the existing data stage functions into ADF functions. The output should return the same output as Datastage. But we need to use only ADF functions.
 
 # Prerequisite
-<Write any prerequisites needed to run your solution>
+NA
 
 # How to run
-<Write steps to run your solution>
+
 Steps
-1.
-2.
+1. As I do not have ADF , I have written the function in a text file "adf_funtions.txt"
+2. Please open the file and run the fuctions one by one in ADF
 
 # Any other points to mention
-<Any other points if you want to mention>
+NA
 
 Problem Statement 3 - XML problem statement
 # Description
