@@ -1,8 +1,0 @@
-with qry as(
-select "select emp_sal.EmpID,salary from  gcp-project1-314218.dataset1a.emp_sal emp_sal inner join gcp-project1-314218.dataset1a.emp_det emp_det on emp_sal.EmpID=emp_det.empid" as tbl,
-"select emp_sal.EmpID,salary from  gcp-project1-314218.dataset1a.emp_sal emp_sal inner join gcp-project1-314218.dataset1a.emp_det emp_det on emp_sal.EmpID=emp_det.empid" as col)
-,stg1 as (select substring(substring(qry.tbl,instr(qry.tbl,'gcp')),1) extract1 from qry)
-,stg2 as (
-  select substring(extract1,1,instr(extract1,' ')) extract2 from stg1
-  )
-select table_name,column_name from dataset1a.INFORMATION_SCHEMA.COLUMNS,stg2 where table_catalog||'.'||table_schema||'.'||table_name = trim(stg2.extract2)
