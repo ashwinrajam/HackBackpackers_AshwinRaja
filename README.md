@@ -35,9 +35,11 @@ NA
 Problem Statement 3 - XML problem statement
 # Description
 The approach is to :
-  - Convert the xml file into a json file.
-  - Consume the json file into a Big Query Table
-  - Query the contents of table to output the data
+  - Parse data from xml file using Python.
+  - Search for the Tags - TRANSFORMATION, INSTANCE. This will give the immediate flow of data from one stage to another.
+  - The individual tags are checked, and text between tags is loaded to a variable.
+  - Search for field name in the variables i.e variable for TRANSFORMATION and variable for INSTANCE.
+  - If it returns a match print the source and target field names.
 
 # Prerequisite
 Big Query, Python
@@ -45,10 +47,9 @@ Big Query, Python
 # How to run
 <Write steps to run your solution>
 Steps
-1. Upload .py and .xml file into local folder
-2. Run the python script to convert .xml file into .json
-3. Using BQ console upload the .json file into BQ table.
-4. Run queries to output the data
+1. Execute the script "Problem_Statement_3_WF_Extract.py". 
+2. Ensure that the xml file is placed in same location.
+  
 
 # Any other points to mention
-  This is still WIP
+  None
